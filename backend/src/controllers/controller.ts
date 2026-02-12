@@ -1,6 +1,6 @@
 import express from "express";
 import { Request, Response } from "express";
-import { getData, addTask, updateTask, deleteTask } from "../servicies/service";
+import { getData, addTask, updateTask, deleteTask } from "../services/service";
 import { checkTaskBody, checkTaskId } from "../middlewares/middlewares";
 
 const router = express.Router();
