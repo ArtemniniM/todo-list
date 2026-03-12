@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.marginContainer {
+  width: 100%;
+  & .container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 750px;
+    & .inputsContainer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & input {
+        border: 1px solid rgba(108, 99, 255, 1);
+        border-radius: 5px;
+        &::placeholder {
+          font-family: Inter, "Courier New", Courier, monospace;
+          font-weight: 500;
+          font-style: Medium;
+          font-size: 16px;
+        }
+      }
+      & .createTitle {
+        padding: 11px 0px 11px 16px;
+        width: 230px;
+      }
+      & .createDescription {
+        padding: 11px 0px 11px 16px;
+        width: 370px;
+      }
+      & button {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: rgba(108, 99, 255, 1);
+
+        font-family: Kanit, "Courier New", Courier, monospace;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: rgba(247, 247, 247, 1);
+      }
+    }
+  }
+  & .tasksContainer {
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    & .task {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      border-bottom: 1px solid rgba(108, 99, 255, 1);
+      padding: 17px 0px 17px;
+      & h4 {
+        width: 150px;
+      }
+      & p {
+        width: 250px;
+      }
+      & input {
+        width: 26px;
+        height: 26px;
+      }
+      & .iconsContainer {
+        display: flex;
+        align-items: center;
+        & img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}
