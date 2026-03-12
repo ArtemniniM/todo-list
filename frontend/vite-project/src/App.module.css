@@ -11,6 +11,7 @@
     flex-direction: column;
     align-items: center;
     max-width: 750px;
+    /* background-color: red; */
     & .inputsContainer {
       width: 100%;
       display: flex;
@@ -53,6 +54,7 @@
     display: flex;
     flex-direction: column;
     width: 520px;
+
     & .task {
       display: flex;
       justify-content: space-between;
@@ -76,6 +78,96 @@
           width: 18px;
           height: 18px;
         }
+      }
+    }
+  }
+  & .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+  }
+
+  & .modalContainer {
+    z-index: 20;
+    margin: auto;
+    max-width: 440px;
+    position: fixed;
+    padding: 18px 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #6c63ff;
+    border-radius: 12px;
+    background-color: #fff;
+    & h1 {
+      padding-bottom: 25px;
+      text-align: center;
+      font-family: "Kanit", sans-serif;
+      font-weight: 500;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #252525;
+    }
+    & input {
+      width: 424px;
+      border: 1px solid #6c63ff;
+      border-radius: 5px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 16px;
+      color: #252525;
+      padding: 11px 0 11px 16px;
+    }
+    & input:first-of-type {
+      margin-bottom: 10px;
+    }
+    & input::placeholder {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 16px;
+      color: #c3c1e5;
+    }
+    & .buttonWrapper {
+      margin-top: 80px;
+      display: flex;
+      justify-content: space-between;
+      & .cancelBtn {
+        width: 110px;
+        height: 38px;
+        opacity: 1;
+        border: 1px solid #6c63ff;
+        border-radius: 5px;
+        background-color: #fff;
+        font-family: "Kanit", sans-serif;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #6c63ff;
+        cursor: pointer;
+      }
+      & .applyBtn {
+        width: 97px;
+        height: 38px;
+        opacity: 1;
+        border: none;
+        border-radius: 5px;
+        background-color: rgba(108, 99, 255, 1);
+        font-family: "Kanit", sans-serif;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: rgba(247, 247, 247, 1);
+        background-color: #6c63ff;
+        cursor: pointer;
       }
     }
   }
